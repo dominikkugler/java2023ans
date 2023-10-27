@@ -10,9 +10,7 @@ public class Lab4Zad1{
         double[] xKopia = Arrays.copyOf(x,x.length);
         double[] xDoubleSize = Arrays.copyOf(x,2*x.length);
         Random rd = new Random();
-        for(int i=0;i<xDoubleSize.length;i++){
-            x[i] = rd.nextDouble();
-        }
+        fillRandomValues(xDoubleSize);
         printTab1D(xDoubleSize);
     }
     static void printTab1D(double[] x){
@@ -35,6 +33,11 @@ public class Lab4Zad1{
 
         }
         sc.close();
-
+    }
+    public static void fillRandomValues(double x[]) {
+        Random rand = new Random();
+        for (int i = 0; i < x.length; i++) {
+            x[i] = rand.nextDouble();
+        }
     }
 }
