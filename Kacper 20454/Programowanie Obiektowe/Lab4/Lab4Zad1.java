@@ -1,13 +1,19 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
-public class zad1{
+public class Lab4Zad1{
     public static void main(String[]args){
         double[] x = new double[8];
         read1Tab1D(x);
         printTab1D(x);
         double[] xKopia = Arrays.copyOf(x,x.length);
-        
+        double[] xDoubleSize = Arrays.copyOf(x,2*x.length);
+        Random rd = new Random();
+        for(int i=0;i<xDoubleSize.length;i++){
+            x[i] = rd.nextDouble();
+        }
+        printTab1D(xDoubleSize);
     }
     static void printTab1D(double[] x){
         for(int i=0;i<x.length;i++){
