@@ -1,0 +1,14 @@
+Mechanizm rozszerzenia znakowego (sign extension) jest stosowany w celu zachowania znaku liczby podczas przesuwania bitów. W przypadku przesuwania bitów w prawo, najbardziej znaczący bit (MSB) jest usuwany, a nowy bit wypełniany jest zerami. Jednak w przypadku liczb ze znakiem, usunięcie MSB może zmienić znak liczby. Dlatego w mechanizmie rozszerzenia znakowego, nowy bit jest wypełniany wartością bitu znaku, aby zachować znak liczby.
+
+Na przykład, jeśli mamy liczbę 0b11111111 (255) i przesuwamy ją o 1 bit w prawo, to otrzymamy 0b11111111 (127), ponieważ nowy bit jest wypełniany zerami. Jednak w przypadku liczby ze znakiem -1 (0b11111111), przesunięcie o 1 bit w prawo bez rozszerzenia znaku da wynik 0b11111111 (127), co jest błędne. Dlatego w przypadku przesuwania bitów w prawo dla liczb ze znakiem, stosujemy mechanizm rozszerzenia znakowego, aby zachować znak liczby.Mechanizm rozszerzenia znakowego (sign extension) jest stosowany w celu zachowania znaku liczby podczas przesuwania bitów. W przypadku przesuwania bitów w prawo, najbardziej znaczący bit (MSB) jest usuwany, a nowy bit wypełniany jest zerami. Jednak w przypadku liczb ze znakiem, usunięcie MSB może zmienić znak liczby. Dlatego w mechanizmie rozszerzenia znakowego, nowy bit jest wypełniany wartością bitu znaku, aby zachować znak liczby.
+
+Na przykład, jeśli mamy liczbę 0b11111111 (255) i przesuwamy ją o 1 bit w prawo, to otrzymamy 0b11111111 (127), ponieważ nowy bit jest wypełniany zerami. Jednak w przypadku liczby ze znakiem -1 (0b11111111), przesunięcie o 1 bit w prawo bez rozszerzenia znaku da wynik 0b11111111 (127), co jest błędne. Dlatego w przypadku przesuwania bitów w prawo dla liczb ze znakiem, stosujemy mechanizm rozszerzenia znakowego, aby zachować znak liczby.
+
+
+        System.out.println("Wynik przesunięcia o 2 bity w prawo (>>): " + result1);
+        System.out.println("Wynik przesunięcia o 2 bity w prawo bez znaku (>>>): " + result2);
+    }
+}
+
+
+
